@@ -1,22 +1,17 @@
-import Data from './Data';
-
 export default class Line {
   constructor(container) {
     this.container = container;
   }
 
-  init() {
-    this.bindToDom();
+  init(posts) {
+    this.bindToDom(posts);
   }
 
-  bindToDom() {
-    this.renderList();
+  bindToDom(posts) {
+    this.renderList(posts);
   }
 
-  renderList() {
-    const data = new Data();
-    const { posts } = data;
-
+  renderList(posts) {
     posts.forEach((post) => {
       this.container.insertAdjacentHTML('beforeend', Line.markup(post));
     });

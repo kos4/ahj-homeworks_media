@@ -1,5 +1,4 @@
 import Line from './Line';
-import Popup from './components/popup/Popup';
 
 export default class Data {
   constructor() {
@@ -26,29 +25,5 @@ export default class Data {
     localStorage.setItem('data', JSON.stringify(this.data));
     Line.renderPost(post);
     message.value = '';
-  }
-
-  getCoordinate(form) {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        this.onCoordinateSuccess.bind(this, form),
-        Data.onCoordinateError.bind(this, form),
-        { enableHighAccuracy: true },
-      );
-    }
-  }
-
-  onCoordinateSuccess(form, data) {
-    const { latitude, longitude } = data.coords;
-
-    this.savePost(form, {
-      lat: latitude,
-      long: longitude,
-    });
-  }
-
-  static onCoordinateError(form) {
-    const popup = new Popup();
-    popup.render(form);
   }
 }

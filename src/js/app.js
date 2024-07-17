@@ -1,6 +1,7 @@
 import Page from './Page';
 import Form from './Form';
 import Line from './Line';
+import Data from './Data';
 
 const pageContainer = document.querySelector('body');
 const page = new Page(pageContainer);
@@ -15,4 +16,7 @@ form.init();
 const lineContainer = document.querySelector('.line__list');
 const line = new Line(lineContainer);
 
-line.init();
+const data = new Data();
+const { posts } = data;
+
+line.init(posts);

@@ -1,4 +1,4 @@
-import Data from './Data';
+import Coordinate from './Coordinate';
 
 export default class Form {
   constructor(container) {
@@ -20,9 +20,9 @@ export default class Form {
     e.preventDefault();
 
     const form = e.target;
-    const data = new Data();
+    const coordinate = new Coordinate();
 
-    data.getCoordinate(form);
+    coordinate.getCoordinate(form);
   }
 
   static markup() {
