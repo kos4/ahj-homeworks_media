@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.line {
+  padding: 50px 0;
+}
+
+.line__item {
+  margin-bottom: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.line__item-date {
+  margin-bottom: 10px;
+
+  text-align: right;
+}
+
+.line__item-message {
+  margin-bottom: 10px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__text {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.form__btn {
+  outline: none;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: .7rem;
+
+  font-size: 1rem;
+  text-wrap: nowrap;
+
+  background: white;
+
+  cursor: pointer;
+}
